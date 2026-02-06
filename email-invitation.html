@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Invitation — Wealth Beyond Beckham</title>
+<style>
+  /* Preview wrapper — not part of the email */
+  body { background: #E8E0D0; font-family: Arial, Helvetica, sans-serif; padding: 40px 20px; margin: 0; }
+  .email-wrapper { max-width: 620px; margin: 0 auto; }
+  .preview-note {
+    background: #fff;
+    border: 1px dashed #ccc;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #666;
+    border-radius: 4px;
+  }
+
+  /* EMAIL STARTS HERE */
+  .email-container {
+    background: #FFFFFF;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  /* Header bar */
+  .email-header {
+    background: #0A1628;
+    padding: 40px 48px 36px;
+    text-align: center;
+    border-bottom: 2px solid #C4A265;
+  }
+
+  .email-header .brands {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .email-header .brands img {
+    height: 24px;
+    width: auto;
+    vertical-align: middle;
+    margin: 0 12px;
+  }
+
+  .email-header .brands .divider {
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background: rgba(196,162,101,0.4);
+    vertical-align: middle;
+    margin: 0 8px;
+  }
+
+  .email-header h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #FFFFFF;
+    margin: 0 0 8px;
+  }
+
+  .email-header h1 em {
+    color: #C4A265;
+    font-style: italic;
+  }
+
+  .email-header .subtitle {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    color: #B8C4D8;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  /* Date strip */
+  .date-strip {
+    background: #132240;
+    padding: 20px 48px;
+    text-align: center;
+  }
+
+  .date-strip table {
+    margin: 0 auto;
+  }
+
+  .date-strip td {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .date-strip .label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #7A8BA8;
+  }
+
+  .date-strip .value {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    color: #D4B87A;
+    margin-top: 4px;
+  }
+
+  .date-strip .sep {
+    width: 1px;
+    background: rgba(196,162,101,0.2);
+    padding: 0;
+  }
+
+  /* Body */
+  .email-body {
+    padding: 40px 48px;
+  }
+
+  .email-body p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444444;
+    margin: 0 0 18px;
+  }
+
+  .email-body .greeting {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    color: #0A1628;
+    margin-bottom: 20px;
+  }
+
+  /* Pain points */
+  .pain-box {
+    background: #F8F5EF;
+    border-left: 3px solid #C4A265;
+    padding: 24px 28px;
+    margin: 28px 0;
+  }
+
+  .pain-box p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+  }
+
+  .pain-box strong {
+    color: #0A1628;
+  }
+
+  /* What you'll learn */
+  .learn-section {
+    margin: 32px 0;
+  }
+
+  .learn-section h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #0A1628;
+    margin-bottom: 20px;
+  }
+
+  .learn-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+
+  .learn-item .check {
+    color: #C4A265;
+    font-size: 16px;
+    margin-right: 12px;
+    line-height: 1.5;
+    flex-shrink: 0;
+  }
+
+  .learn-item p {
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Schedule */
+  .schedule-section {
+    margin: 28px 0;
+    background: #F8F5EF;
+    padding: 24px 28px;
+  }
+
+  .schedule-section h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #0A1628;
+    margin-bottom: 16px;
+  }
+
+  .schedule-item {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .schedule-item .time {
+    font-weight: 700;
+    color: #C4A265;
+    width: 70px;
+    flex-shrink: 0;
+  }
+
+  .schedule-item .event {
+    color: #444;
+  }
+
+  /* Speakers */
+  .speakers-row {
+    margin: 32px 0;
+    border-top: 1px solid #E8E0D0;
+    border-bottom: 1px solid #E8E0D0;
+    padding: 28px 0;
+  }
+
+  .speakers-row h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #0A1628;
+    margin-bottom: 20px;
+  }
+
+  .company-group {
+    margin-bottom: 20px;
+  }
+
+  .company-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .company-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #C4A265;
+    margin-bottom: 8px;
+  }
+
+  .speaker {
+    margin-bottom: 6px;
+  }
+
+  .speaker .name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0A1628;
+  }
+
+  .speaker .title {
+    font-size: 12px;
+    color: #777;
+  }
+
+  /* CTA Button */
+  .cta-wrapper {
+    text-align: center;
+    margin: 36px 0 16px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 16px 48px;
+    background: #C4A265;
+    color: #0A1628 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .cta-note {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 0;
+  }
+
+  /* Footer */
+  .email-footer {
+    background: #0A1628;
+    padding: 32px 48px;
+    text-align: center;
+  }
+
+  .email-footer .logos {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .email-footer .logos img {
+    height: 20px;
+    width: auto;
+    vertical-align: middle;
+    margin: 0 10px;
+    opacity: 0.7;
+  }
+
+  .email-footer .logos .divider {
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background: rgba(196,162,101,0.3);
+    vertical-align: middle;
+    margin: 0 6px;
+  }
+
+  .email-footer .logos span.text {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7A8BA8;
+    vertical-align: middle;
+  }
+
+  .email-footer .disclaimer {
+    font-size: 11px;
+    color: #4A5A78;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<div class="email-wrapper">
+
+<div class="preview-note">
+  <strong>📧 Email Invitation Preview</strong> — Copy the content inside <code>.email-container</code> into your email marketing tool (Mailchimp, SendGrid, etc.).
+</div>
+
+<!-- EMAIL STARTS -->
+<div class="email-container">
+
+  <!-- HEADER -->
+  <div class="email-header">
+    <div class="brands">
+      <img src="utmost_logo_White.png" alt="Utmost">
+      <span class="divider"></span>
+      <img src="logo A&G BLANCO.png" alt="A&G Banco">
+      <span class="divider"></span>
+      <img src="fideso-logo-white.png" alt="Fideso">
+    </div>
+    <h1>Your Beckham Law Has<br>an <em>Expiry Date.</em><br>Your Wealth Shouldn't.</h1>
+    <p class="subtitle">An exclusive morning in Marbella</p>
+  </div>
+
+  <!-- DATE STRIP -->
+  <div class="date-strip">
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <div class="label">Date</div>
+          <div class="value">February 18th, 2026</div>
+        </td>
+        <td class="sep">&nbsp;</td>
+        <td>
+          <div class="label">Time</div>
+          <div class="value">11:30</div>
+        </td>
+        <td class="sep">&nbsp;</td>
+        <td>
+          <div class="label">Venue</div>
+          <div class="value">The Pool, Marbella</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- BODY -->
+  <div class="email-body">
+
+    <p class="greeting">You chose Spain for the lifestyle and the opportunity.</p>
+
+    <p>But the Beckham Law's six-year window closes faster than you think — and when it does, everything changes: worldwide income taxation at up to 47%, wealth tax on global assets, exit tax on unrealised gains, and succession complexity across borders.</p>
+
+    <div class="pain-box">
+      <p><strong>The question isn't whether your Beckham Law will end.</strong> It's whether your wealth is structured to thrive when it does — and wherever you go next.</p>
+    </div>
+
+    <p>Join us at <strong>The Pool Marbella</strong> for an exclusive session where three leading specialists come together to present a proven, tax-efficient structure — the <strong>Luxembourg Unit Linked</strong> — designed specifically for internationally mobile professionals like you.</p>
+
+    <!-- SCHEDULE -->
+    <div class="schedule-section">
+      <h3>Schedule</h3>
+      <div class="schedule-item">
+        <span class="time">11:30</span>
+        <span class="event">Welcome</span>
+      </div>
+      <div class="schedule-item">
+        <span class="time">12:00</span>
+        <span class="event">Presentation</span>
+      </div>
+      <div class="schedule-item">
+        <span class="time">13:30</span>
+        <span class="event">Q&A</span>
+      </div>
+      <div class="schedule-item">
+        <span class="time">14:00</span>
+        <span class="event">Cocktail</span>
+      </div>
+    </div>
+
+    <!-- WHAT YOU'LL LEARN -->
+    <div class="learn-section">
+      <h3>What You'll Discover</h3>
+
+      <div class="learn-item">
+        <span class="check">✦</span>
+        <p>How to defer taxation on investment returns — and pay only when you choose to withdraw</p>
+      </div>
+      <div class="learn-item">
+        <span class="check">✦</span>
+        <p>How to plan for relocation from Spain without triggering exit tax on unrealised gains</p>
+      </div>
+      <div class="learn-item">
+        <span class="check">✦</span>
+        <p>Wealth Tax and Solidarity Tax strategies using Lombard credit — explained with a practical case study</p>
+      </div>
+      <div class="learn-item">
+        <span class="check">✦</span>
+        <p>How to plan donations and succession without triggering capital gains tax</p>
+      </div>
+      <div class="learn-item">
+        <span class="check">✦</span>
+        <p>How to protect your assets with full privacy and legal safeguards</p>
+      </div>
+      <div class="learn-item">
+        <span class="check">✦</span>
+        <p>How the structure travels with you across jurisdictions — Portugal, UK, Sweden, and beyond</p>
+      </div>
+    </div>
+
+    <!-- SPEAKERS -->
+    <div class="speakers-row">
+      <h3>Your Hosts</h3>
+
+      <div class="company-group">
+        <div class="company-label">Utmost</div>
+        <div class="speaker">
+          <span class="name">Diego de Elejabeitia Rodríguez</span>
+          <div class="title">Head of Wealth Protection, Spain & LATAM</div>
+        </div>
+        <div class="speaker">
+          <span class="name">Javier Platero García</span>
+          <div class="title">Relationship Manager, Spain & LATAM</div>
+        </div>
+      </div>
+
+      <div class="company-group">
+        <div class="company-label">Fideso</div>
+        <div class="speaker">
+          <span class="name">Douglas Goullet</span>
+          <div class="title">CEO</div>
+        </div>
+        <div class="speaker">
+          <span class="name">Jesús Núñez Caballero</span>
+          <div class="title">Director of the Legal Department</div>
+        </div>
+      </div>
+
+      <div class="company-group">
+        <div class="company-label">A&G Banco</div>
+        <div class="speaker">
+          <span class="name">Javier Baquero Mazars</span>
+          <div class="title">Private Banker</div>
+        </div>
+        <div class="speaker">
+          <span class="name">Leopoldo Ybarra</span>
+          <div class="title">Senior Private Banker</div>
+        </div>
+        <div class="speaker">
+          <span class="name">Manuel García</span>
+          <div class="title">Wealth Planner</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-wrapper">
+      <a href="mailto:hello@thepool.es?subject=RSVP%20-%20Wealth%20Beyond%20Beckham%20Event%20-%20February%2018" class="cta-btn">Reserve Your Place</a>
+    </div>
+    <p class="cta-note">By invitation only &middot; Limited to 40 attendees</p>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="email-footer">
+    <div class="logos">
+      <img src="utmost_logo_White.png" alt="Utmost">
+      <span class="divider"></span>
+      <img src="logo A&G BLANCO.png" alt="A&G Banco">
+      <span class="divider"></span>
+      <img src="fideso-logo-white.png" alt="Fideso">
+      <span class="divider"></span>
+      <span class="text">The Pool</span>
+    </div>
+    <div class="disclaimer">This event is informational in nature and does not constitute financial, tax, or legal advice. Each attendee's situation is unique and should be evaluated by qualified professionals. Please consult your tax advisor before making any decisions.</div>
+  </div>
+
+</div>
+<!-- EMAIL ENDS -->
+
+</div>
+
+</body>
+</html>
